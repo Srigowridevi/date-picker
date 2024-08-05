@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Date-Picker</title>
+        <style>
+            .background{
+                background-repeat: no-repeat;
+                background-image : url('pexels-photo-39811.jpeg');
+                background-size  : cover;
+                margin           : 0;
+                display          : flex;
+                align-items      : center;
+                justify-content  : center;
+            }
+            .glass-input {
+            background: rgba(163, 163, 163, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 10px; 
+            padding: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 250px; 
+            height: 40px;
+            font-size: 16px;
+            color: white; 
+        }
+        
+        .glass-input::placeholder {
+            color: rgba(255, 255, 255, 0.7); /* Placeholder color */
+        }
+        
+        #da-fi{
+            color           : rgb(252, 249, 249);
+            background-color: dimgrey;
+        }
+        </style>
+        <link   href      = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel = "stylesheet" integrity = "sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin = "anonymous">
+        <script src       = "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"  integrity = "sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"   crossorigin = "anonymous"></script>
+        <script src       = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src       = "https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link   rel       = "stylesheet" href  = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link   rel       = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link   rel       = "stylesheet" type  = "text/css" href = "https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+        <script type      = "text/javascript" src = "https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <script type      = "text/javascript"  src = "javascript/script.js"></script>
+    </head>
+        <body class="background">
+            <form name = "filter_form" role = "form" method = "post" action = "javascript:void(0)">
+                <h3 class = "text-center">Date Picker</h3><hr>
+                <div class = "row" >
+                    <div class = "col-sm-3"></div>
+                    <div class = "col-sm-6">
+                            <div  class = "form-group col-md-12">
+                                <label for   = "searchvalue">Search Records</label>
+                                <input type  = "text" class= "glass-input" id = "searchvalue" name = "searchvalue">
+                            </div>
+                            <div class = "form-group col-md-12 demo">
+                            <label for="date">Date to Filter</label> 
+                            <div style="position: relative; display: inline-block; width: 100%;">
+                                <input type="text" id="config-demo" class="glass-input"  style="padding-right: 30px; width: 100%;">
+                                <i class="glyphicon glyphicon-calendar fa fa-calendar" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none;"></i>
+                                <input type="hidden" id="add_products_start_date" value="">
+                                <input type="hidden" id="add_products_end_date" value="">
+                            </div>
+                            </div>
+                            <div class = "row  text-center mt-4">
+                                <div class="form-group">
+                                    <input type="button" class="btn btn-dark" id="da-fi" value="Filters">
+                                </div>
+                                
+                            </div>
+                    </div>
+                    <div class="col-sm-2 mb-4"></div> 
+                </div>
+            </form>
+        </body>
+</html>
+
